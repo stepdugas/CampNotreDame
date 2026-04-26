@@ -69,26 +69,42 @@ export default function Dashboard() {
         </div>
       </div>
 
-      <div className="bg-white rounded-xl border border-gray-200 p-6">
+      <div className="bg-white rounded-xl border border-gray-200 p-4 sm:p-6">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Registrations</h3>
-        <div className="overflow-x-auto">
+
+        {/* Mobile: card layout */}
+        <div className="sm:hidden space-y-3">
+          {recentRegistrations.map((r, i) => (
+            <div key={i} className="border border-gray-100 rounded-lg p-3">
+              <div className="flex items-center justify-between mb-1">
+                <span className="text-sm font-medium text-gray-900">{r.family}</span>
+                <StatusBadge status={r.status} />
+              </div>
+              <p className="text-sm text-gray-700">{r.camper}</p>
+              <p className="text-xs text-gray-500 mt-1">{r.session} &middot; {r.date}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop: table layout */}
+        <div className="hidden sm:block overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-gray-200 text-left text-gray-500">
-                <th className="pb-3 font-medium">Family</th>
-                <th className="pb-3 font-medium">Camper</th>
-                <th className="pb-3 font-medium">Week</th>
-                <th className="pb-3 font-medium">Date Registered</th>
+                <th className="pb-3 pr-4 font-medium">Family</th>
+                <th className="pb-3 pr-4 font-medium">Camper</th>
+                <th className="pb-3 pr-4 font-medium">Week</th>
+                <th className="pb-3 pr-4 font-medium">Date Registered</th>
                 <th className="pb-3 font-medium">Payment</th>
               </tr>
             </thead>
             <tbody>
               {recentRegistrations.map((r, i) => (
                 <tr key={i} className="border-b border-gray-100 last:border-0">
-                  <td className="py-3 text-gray-900 font-medium">{r.family}</td>
-                  <td className="py-3 text-gray-700">{r.camper}</td>
-                  <td className="py-3 text-gray-700">{r.session}</td>
-                  <td className="py-3 text-gray-500">{r.date}</td>
+                  <td className="py-3 pr-4 text-gray-900 font-medium whitespace-nowrap">{r.family}</td>
+                  <td className="py-3 pr-4 text-gray-700 whitespace-nowrap">{r.camper}</td>
+                  <td className="py-3 pr-4 text-gray-700">{r.session}</td>
+                  <td className="py-3 pr-4 text-gray-500 whitespace-nowrap">{r.date}</td>
                   <td className="py-3"><StatusBadge status={r.status} /></td>
                 </tr>
               ))}
