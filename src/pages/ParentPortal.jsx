@@ -60,7 +60,7 @@ export default function ParentPortal() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div className="bg-white rounded-xl border border-gray-200 p-6">
           <h3 className="font-semibold text-gray-900 mb-4">Account Summary</h3>
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             <div className="bg-blue-50 rounded-lg p-3 text-center">
               <p className="text-xs text-gray-600">Charged</p>
               <p className="text-lg font-bold text-blue-700">$2,400</p>

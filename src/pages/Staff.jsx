@@ -93,7 +93,7 @@ export default function Staff() {
         {/* Weekly Assignment History */}
         <div className="bg-white rounded-xl border border-gray-200 p-6">
           <h3 className="font-semibold text-gray-900 mb-4">Weekly Assignments</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
             {allAssignments.map(a => (
               <div key={a.week} className={`rounded-lg p-3 text-center ${a.assignment ? 'bg-green-50 border border-green-200' : 'bg-gray-50 border border-gray-200'}`}>
                 <p className="text-xs text-gray-500 mb-1">Week {a.week}</p>

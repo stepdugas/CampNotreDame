@@ -22,7 +22,7 @@ export default function Discounts() {
       </div>
 
       {/* Summary */}
-      <div className="grid grid-cols-3 gap-4 mb-6">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
         <div className="bg-green-50 rounded-xl p-5">
           <p className="text-sm text-gray-600 mb-1">Total Awarded</p>
           <p className="text-3xl font-bold text-green-700">${totalAwarded.toLocaleString()}</p>

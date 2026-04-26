@@ -135,7 +135,7 @@ export default function Analytics() {
       {/* Key Metrics Table */}
       <div className="bg-white rounded-xl border border-gray-200 p-6">
         <h3 className="font-semibold text-gray-900 mb-4">Key Metrics</h3>
-        <div className="grid grid-cols-2 sm:grid-cols-5 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
           <div className="text-center p-3 bg-gray-50 rounded-lg">
             <p className="text-xs text-gray-500 mb-1">Avg Camper Age</p>
             <p className="text-xl font-bold text-gray-900">{analyticsData.keyMetrics.avgCamperAge}</p>

@@ -44,7 +44,7 @@ export default function Payments() {
     <div>
       <h2 className="text-2xl font-bold text-gray-900 mb-6">Payments</h2>
 
-      <div className="grid grid-cols-3 gap-4 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
         {summaryCards.map(c => (
           <div key={c.label} className={`${c.bg} rounded-xl p-5`}>
             <p className="text-sm text-gray-600 mb-1">{c.label}</p>

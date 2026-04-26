@@ -12,7 +12,7 @@ export default function Alumni() {
         <h2 className="text-2xl font-bold text-gray-900 mb-2">{selected.familyName} Family</h2>
         <p className="text-gray-500 text-sm mb-6">Member since {selected.firstYear} &middot; {selected.totalYears} years &middot; {selected.camperCount} camper{selected.camperCount > 1 ? 's' : ''}</p>
 
-        <div className="grid grid-cols-3 gap-4 mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
           <div className="bg-blue-50 rounded-lg p-4 text-center">
             <p className="text-sm text-gray-600">Total Years</p>
             <p className="text-2xl font-bold text-blue-700">{selected.totalYears}</p>
